@@ -16,21 +16,12 @@ Given a topic, you must discover, extract, and verify information from authorita
 
 ### Phase 1: Discovery
 
-Use Tavily search to find authoritative sources. NEVER use WebSearch or WebFetch - they are blocked.
+Use web search to find authoritative sources:
 
-```bash
-# Primary query - official documentation
-~/.agents/skills/search/scripts/search.sh '{"query": "official <topic> documentation site", "max_results": 5, "search_depth": "advanced"}'
-
-# Secondary query - getting started / quickstart
-~/.agents/skills/search/scripts/search.sh '{"query": "<topic> getting started quickstart tutorial", "max_results": 3}'
-
-# Tertiary query - API reference
-~/.agents/skills/search/scripts/search.sh '{"query": "<topic> API reference examples", "max_results": 3}'
-
-# Error handling query
-~/.agents/skills/search/scripts/search.sh '{"query": "<topic> common errors troubleshooting", "max_results": 3}'
-```
+1. Search for official documentation: `official <topic> documentation`
+2. Search for quickstart guides: `<topic> getting started quickstart`
+3. Search for API reference: `<topic> API reference examples`
+4. Search for troubleshooting: `<topic> common errors troubleshooting`
 
 **Source Prioritization:**
 1. Official documentation (docs.*, *.dev, official GitHub repos)
@@ -40,11 +31,7 @@ Use Tavily search to find authoritative sources. NEVER use WebSearch or WebFetch
 
 ### Phase 2: Extraction
 
-For the top 3-5 most authoritative URLs, extract content:
-
-```bash
-~/.agents/skills/extract/scripts/extract.sh '{"urls": ["URL1", "URL2", "URL3", "URL4", "URL5"], "extract_depth": "advanced"}'
-```
+For the top 3-5 most authoritative URLs, fetch and extract content.
 
 **Extract these specific sections:**
 - [ ] Installation / Setup instructions
@@ -156,13 +143,12 @@ api_key = os.environ.get("<ENV_VAR>")
 
 ## Rules
 
-1. **NEVER use WebSearch or WebFetch** - They are blocked. Always use Tavily scripts.
-2. **NEVER hallucinate** - Only include information extracted from actual sources.
-3. **ALWAYS cite sources** - Every fact should be traceable to a URL.
-4. **Prioritize official sources** - Official docs > tutorials > blog posts.
-5. **Include error handling** - All code examples must show proper error handling.
-6. **Note version info** - Always mention which version the information applies to.
-7. **Flag uncertainty** - If something is unclear or conflicting, say so explicitly.
+1. **NEVER hallucinate** - Only include information extracted from actual sources.
+2. **ALWAYS cite sources** - Every fact should be traceable to a URL.
+3. **Prioritize official sources** - Official docs > tutorials > blog posts.
+4. **Include error handling** - All code examples must show proper error handling.
+5. **Note version info** - Always mention which version the information applies to.
+6. **Flag uncertainty** - If something is unclear or conflicting, say so explicitly.
 
 ## When Topic is Ambiguous
 
@@ -190,7 +176,3 @@ Which would be most useful?
 - All code must be complete and runnable
 - Include import statements in code examples
 - Show environment variable usage for secrets
-
-## Current Year Note
-
-**The current year is 2026.** When searching for documentation and best practices, include the year in searches to ensure you find the most recent information.

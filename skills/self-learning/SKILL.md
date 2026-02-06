@@ -33,18 +33,11 @@ Proceed directly to research.
 
 ### Step 2: Discover Authoritative Sources
 
-Use Tavily search (NOT WebSearch) with targeted queries:
+Use web search to find authoritative sources with targeted queries:
 
-```bash
-# Primary query - official docs
-~/.agents/skills/search/scripts/search.sh '{"query": "official <topic> documentation site", "max_results": 5, "search_depth": "advanced"}'
-
-# Secondary query - quickstart/getting started
-~/.agents/skills/search/scripts/search.sh '{"query": "<topic> quickstart guide getting started", "max_results": 3}'
-
-# Tertiary query - API reference
-~/.agents/skills/search/scripts/search.sh '{"query": "<topic> API reference examples", "max_results": 3}'
-```
+1. Search: `official <topic> documentation site`
+2. Search: `<topic> quickstart guide getting started`
+3. Search: `<topic> API reference examples`
 
 **Source prioritization:**
 1. Official documentation (docs.*, *.dev, official GitHub)
@@ -54,11 +47,7 @@ Use Tavily search (NOT WebSearch) with targeted queries:
 
 ### Step 3: Extract Content from Top Sources
 
-Use Tavily extract on the top 3-5 URLs:
-
-```bash
-~/.agents/skills/extract/scripts/extract.sh '{"urls": ["URL1", "URL2", "URL3"], "extract_depth": "advanced"}'
-```
+Fetch and extract content from the top 3-5 URLs found.
 
 **Extract these sections from each source:**
 - [ ] Installation / Setup
@@ -237,8 +226,8 @@ This enables future `/update-skill <topic>` to refresh the skill.
 ## Tool Requirements
 
 This skill requires:
-- Tavily search (`~/.agents/skills/search/scripts/search.sh`)
-- Tavily extract (`~/.agents/skills/extract/scripts/extract.sh`)
+- Web search capability
+- Web page fetching capability
 - File system access (Write tool)
 - Optional: GitHub CLI for gist creation
 
@@ -272,7 +261,6 @@ Claude: Got it, focusing on kubectl fundamentals...
 
 ## Notes
 
-- Always use Tavily, never WebSearch/WebFetch (blocked)
 - Keep generated skills between 2,000-4,000 tokens
 - Prioritize Python and TypeScript examples
 - Include error handling in all code examples

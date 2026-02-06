@@ -6,96 +6,119 @@
 
 A Claude Code plugin that autonomously researches new technologies and generates production-ready, reusable skills.
 
-## What It Does
+---
 
-When you encounter a new library, API, or framework, just tell Claude to learn it:
-
-```
-/learn anthropic api
-```
-
-Claude will:
-1. Search for official documentation
-2. Extract key information from multiple authoritative sources
-3. Verify facts across sources
-4. Ask you for refinement if needed
-5. Generate a complete, reusable SKILL.md
-6. Save it for permanent reuse across all your projects
-
-## Installation
+## Quick Start
 
 ```bash
-git clone https://github.com/ychampion/claude-self-learning ~/.claude/plugins/claude-self-learning
+/plugin marketplace add ychampion/claude-self-learning
+/plugin install claude-self-learning
 ```
 
-## Requirements
-
-- Tavily API key in environment variables
-
-## Usage
-
-### Learn a new technology
+Then restart Claude Code and use:
 
 ```
 /learn anthropic api
-/learn stripe webhooks
-/learn prisma orm
 ```
 
-### Update an existing skill
-
-```
-/update-skill anthropic api
-```
-
-### List all learned skills
-
-```
-/list-skills
-```
+---
 
 ## How It Works
 
 ```
 /learn <topic>
-    │
-    ▼
-┌─────────────────────┐
-│  Researcher Agent   │ → Tavily Search + Extract
-└─────────────────────┘
-    │
-    ▼
-┌─────────────────────┐
-│  Interactive Review │ → User chooses focus areas
-└─────────────────────┘
-    │
-    ▼
-┌─────────────────────┐
-│  Skill Generator    │ → SKILL.md + .meta.json
-└─────────────────────┘
-    │
-    ▼
-┌─────────────────────┐
-│  Storage Options    │ → Local / Global
-└─────────────────────┘
+       │
+       ▼
+┌──────────────────────┐
+│   Researcher Agent   │ → Web Search + Content Extraction
+└──────────────────────┘
+       │
+       ▼
+┌──────────────────────┐
+│   Interactive Review │ → User chooses focus areas
+└──────────────────────┘
+       │
+       ▼
+┌──────────────────────┐
+│   Skill Generator    │ → SKILL.md + .meta.json
+└──────────────────────┘
+       │
+       ▼
+┌──────────────────────┐
+│   Storage Options    │ → Local / Global / Plugin
+└──────────────────────┘
 ```
+
+---
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `/learn <topic>` | Research a topic and generate a skill |
+| `/update-skill <topic>` | Refresh an existing skill with latest info |
+| `/list-skills` | View all generated skills |
+
+---
 
 ## Features
 
-- Multi-source verification
-- Interactive learning
-- Skill versioning
-- Git integration
-- Production-ready output
+- **Multi-source verification** - Cross-checks facts across authoritative sources
+- **Interactive learning** - Asks clarifying questions for broad topics
+- **Skill versioning** - Tracks updates with .meta.json metadata
+- **Production-ready output** - Error handling, best practices, real examples
+
+---
 
 ## Storage Locations
 
-| Location | Path |
-|----------|------|
-| Project-local | `./.claude/skills/<topic>/` |
-| User-global | `~/.claude/skills/<topic>/` |
-| Plugin storage | `./storage/skills/<topic>/` |
+| Location | Path | Use Case |
+|----------|------|----------|
+| Project-local | `./.claude/skills/<topic>/` | Project-specific |
+| User-global | `~/.claude/skills/<topic>/` | All projects |
+| Plugin storage | `./storage/skills/<topic>/` | Git-tracked |
+
+---
+
+## Example Generated Skill
+
+```markdown
+---
+name: anthropic-api
+description: Complete guide to using the Anthropic Claude API
+version: 1.0.0
+sources_verified: 2026-02-07
+---
+
+# Anthropic API
+
+## Quick Reference
+
+| Item | Value |
+|------|-------|
+| Official Docs | [docs.anthropic.com](https://docs.anthropic.com) |
+| Installation | `pip install anthropic` / `bun add @anthropic-ai/sdk` |
+| Auth Required | Yes - API key from console.anthropic.com |
+
+## Installation
+...
+
+## Basic Usage
+...
+```
+
+---
+
+## Contributing
+
+Contributions welcome! Please fork, create a feature branch, and submit a PR.
+
+---
 
 ## License
 
 MIT
+
+---
+
+**Built for Claude Code** | **Made with ❤️**
