@@ -1,0 +1,28 @@
+{
+  "name": "claude-self-learning",
+  "version": "1.0.0",
+  "description": "Claude Code plugin for autonomous technology learning and skill generation",
+  "author": "ychampion",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ychampion/claude-self-learning"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "plugin",
+    "learning",
+    "skills",
+    "ai",
+    "automation"
+  ],
+  "files": [
+    "plugin.json",
+    "commands/",
+    "agents/",
+    "skills/",
+    "hooks/",
+    "scripts/"
+  ]
+}

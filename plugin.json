@@ -1,0 +1,27 @@
+{
+  "name": "claude-self-learning",
+  "version": "1.0.0",
+  "description": "Autonomously research any technology and generate reusable Claude Code skills with verified, up-to-date information",
+  "author": "ychampion",
+  "repository": "https://github.com/ychampion/claude-self-learning",
+  "license": "MIT",
+  "commands": [
+    "commands/learn.md",
+    "commands/update-skill.md",
+    "commands/list-skills.md"
+  ],
+  "agents": [
+    "agents/researcher.md",
+    "agents/skill-generator.md"
+  ],
+  "skills": [
+    "skills/self-learning"
+  ],
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "script": "hooks/auto-commit.sh",
+      "description": "Auto-commit generated skills to git"
+    }
+  ]
+}
