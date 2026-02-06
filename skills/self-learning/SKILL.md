@@ -279,5 +279,3 @@ Claude: Got it, focusing on kubectl fundamentals...
 - Verify all facts against official sources
 - Include the verification date in every generated skill
 
----
-*Inspired by [philschmid/self-learning-skill](https://github.com/philschmid/self-learning-skill) for Gemini CLI*

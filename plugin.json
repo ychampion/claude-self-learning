@@ -1,23 +1,5 @@
 {
   "name": "claude-self-learning",
   "version": "1.1.0",
-  "description": "Autonomously research any technology and generate reusable Claude Code skills with verified, up-to-date information. Features multi-source verification, interactive refinement, and git-backed versioning.",
-  "author": {
-    "name": "ychampion",
-    "email": "ychampion@example.com",
-    "url": "https://github.com/ychampion"
-  },
-  "homepage": "https://github.com/ychampion/claude-self-learning",
-  "repository": "https://github.com/ychampion/claude-self-learning",
-  "license": "MIT",
-  "keywords": [
-    "ai-powered",
-    "self-learning",
-    "skill-generation",
-    "documentation",
-    "research",
-    "automation",
-    "tavily",
-    "knowledge-management"
-  ]
+  "description": "Autonomously research any technology and generate reusable Claude Code skills"
 }
