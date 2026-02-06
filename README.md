@@ -11,11 +11,10 @@ A Claude Code plugin that autonomously researches new technologies and generates
 ## Quick Start
 
 ```bash
-/plugin marketplace add ychampion/claude-self-learning
-/plugin install claude-self-learning
+/plugin install github:ychampion/claude-self-learning
 ```
 
-Then restart Claude Code and use:
+Then use:
 
 ```
 /learn anthropic api
