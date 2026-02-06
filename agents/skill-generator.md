@@ -1,7 +1,7 @@
 ---
 name: skill-generator
-description: Generates production-ready SKILL.md files from research
-tools: [Read, Write]
+description: "Use this agent when you have research findings and need to generate a production-ready SKILL.md file. This agent transforms structured research into polished, reusable skills with proper formatting, code examples, and best practices. <example>Context: Research has been completed for a technology. user: \"Generate a skill from this research\" assistant: \"I'll use the skill-generator agent to create a production-ready SKILL.md.\" <commentary>Since research is complete and a skill needs to be generated, use the skill-generator agent.</commentary></example>"
+model: sonnet
 ---
 
 # Skill Generator Agent

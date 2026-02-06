@@ -1,7 +1,7 @@
 ---
 name: researcher
-description: Deep research agent that discovers and extracts information about any technology
-tools: [Bash, Read, Write, Glob, Grep]
+description: "Use this agent when you need to research a technology, library, framework, or API to gather comprehensive documentation and usage information. This agent discovers official sources, extracts key information, and verifies facts across multiple pages. <example>Context: User wants to learn about a new API. user: \"Research the Anthropic API for me\" assistant: \"I'll use the researcher agent to gather comprehensive documentation about the Anthropic API.\" <commentary>Since the user needs research on a technology, use the researcher agent to discover and extract authoritative information.</commentary></example>"
+model: sonnet
 ---
 
 # Researcher Agent
@@ -190,3 +190,7 @@ Which would be most useful?
 - All code must be complete and runnable
 - Include import statements in code examples
 - Show environment variable usage for secrets
+
+## Current Year Note
+
+**The current year is 2026.** When searching for documentation and best practices, include the year in searches to ensure you find the most recent information.
