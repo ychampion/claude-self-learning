@@ -1,5 +1,7 @@
 # claude-self-learning
 
+[![Made by Yashas G](https://img.shields.io/badge/Made%20by-Yashas%20G-blue?style=flat&logo=x&logoColor=white)](https://x.com/yashasgunderia)
+
 > Teach Claude Code about any technology. Automatically.
 
 A Claude Code plugin that autonomously researches new technologies and generates production-ready, reusable skills.
