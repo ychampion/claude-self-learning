@@ -40,23 +40,14 @@ Load `.meta.json` to get:
 
 ### Step 3: Re-Research
 
-Launch researcher agent with context:
+Follow the researcher agent instructions from `agents/researcher.md` with this context:
 
-```
-Use Task tool with subagent_type "claude-self-learning:researcher"
-Prompt: "Research '<topic>' for updates.
-
-Previous sources:
-<list from .meta.json>
-
-Focus on:
+**Focus on:**
 1. Check if previous sources are still valid
 2. Find any new official documentation
 3. Identify API changes or deprecations
 4. Find new best practices
-
-Return structured findings with emphasis on CHANGES since <last_update_date>."
-```
+5. Note CHANGES since the last update date
 
 ### Step 4: Compare and Diff
 
@@ -83,20 +74,12 @@ Would you like me to:
 
 ### Step 5: Generate Updated Skill
 
-Launch skill generator with both old and new research:
+Follow the skill-generator agent instructions from `agents/skill-generator.md`:
 
-```
-Use Task tool with subagent_type "claude-self-learning:skill-generator"
-Prompt: "Update the SKILL.md for '<topic>'.
-
-Existing skill:
-<current SKILL.md content>
-
-New research:
-<new research findings>
-
-Increment the version number and update the sources_verified date."
-```
+1. Merge old skill content with new research findings
+2. Increment the version number
+3. Update the sources_verified date
+4. Preserve working content, update changed sections
 
 ### Step 6: Show Diff and Confirm
 

@@ -49,14 +49,14 @@ If found, ask: "A skill for '<topic>' already exists (v<version>, last updated <
 2. Update it with fresh research
 3. Create a new one with a different name"
 
-### Step 3: Launch Researcher Agent
+### Step 3: Research the Topic
 
-If creating new or updating:
+If creating new or updating, follow the researcher agent instructions from `agents/researcher.md`:
 
-```
-Use Task tool with subagent_type "claude-self-learning:researcher"
-Prompt: "Research '<topic>' thoroughly. Find official docs, extract installation, auth, usage examples, best practices. Return structured findings."
-```
+1. Use web search to find official documentation
+2. Extract content from top 3-5 authoritative sources
+3. Verify facts across multiple sources
+4. Structure findings in the research report format
 
 ### Step 4: Interactive Refinement
 
@@ -74,18 +74,14 @@ Should I:
 3. Add examples for additional languages
 4. Focus on a particular use case"
 
-### Step 5: Launch Skill Generator
+### Step 5: Generate the Skill
 
-```
-Use Task tool with subagent_type "claude-self-learning:skill-generator"
-Prompt: "Generate a SKILL.md for '<topic>' using this research:
+Follow the skill-generator agent instructions from `agents/skill-generator.md`:
 
-<research_results>
-[Insert structured research from researcher agent]
-</research_results>
-
-Follow the skill template format exactly."
-```
+1. Use the skill template structure from `references/skill_template.md`
+2. Fill in all sections with verified research
+3. Include error handling in all code examples
+4. Add proper frontmatter with version and verification date
 
 ### Step 6: Offer Storage Options
 
