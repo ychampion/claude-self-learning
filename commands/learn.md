@@ -126,6 +126,6 @@ git commit -m "feat: add skill for <topic>"
 
 ## Error Handling
 
-- If Tavily search fails, retry with fallback API keys
+- If web search fails, try alternative queries or different search terms
 - If no official docs found, expand search to include tutorials
 - If topic is ambiguous, ask for clarification before researching
