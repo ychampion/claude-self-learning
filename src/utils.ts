@@ -28,7 +28,7 @@ export function parseFrontmatter(content: string): {
     return { frontmatter: {}, body: content };
   }
 
-  const [, frontmatterStr, body] = match;
+  const [, frontmatterStr = '', body = ''] = match;
   const frontmatter: Record<string, unknown> = {};
 
   frontmatterStr.split('\n').forEach((line) => {

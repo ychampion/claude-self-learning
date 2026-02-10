@@ -9,7 +9,7 @@ import { QualityChecker } from './quality-checker.js';
 import { TemplateEngine } from './template-engine.js';
 import { SkillLocation } from './types.js';
 import type { SkillMetadata } from './types.js';
-import { formatDate, slugify } from './utils.js';
+import { formatDate } from './utils.js';
 
 const program = new Command();
 const config = getConfig();

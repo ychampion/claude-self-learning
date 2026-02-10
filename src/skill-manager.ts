@@ -1,7 +1,8 @@
-import { readFile, writeFile, mkdir, access, stat, readdir } from 'fs/promises';
+import { readFile, writeFile, mkdir, access, stat } from 'fs/promises';
 import { join, dirname } from 'path';
 import fg from 'fast-glob';
-import type { Skill, SkillLocation, SkillMetadata, PluginConfig, CodeBlock, SkillIndex } from './types.js';
+import { SkillLocation } from './types.js';
+import type { Skill, SkillMetadata, PluginConfig, CodeBlock, SkillIndex } from './types.js';
 import { SkillMetadataSchema } from './types.js';
 import {
   slugify,

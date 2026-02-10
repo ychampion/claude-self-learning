@@ -1,5 +1,3 @@
-import { readFile, writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
 import type { SkillTemplate, SkillMetadata } from './types.js';
 import { formatDate, generateFrontmatter } from './utils.js';
 
@@ -7,7 +5,12 @@ import { formatDate, generateFrontmatter } from './utils.js';
  * Template engine for generating skills from templates
  */
 export class TemplateEngine {
-  constructor(private templatesDir: string) {}
+  // Reserved for future template loading from file system
+  // private templatesDir: string;
+  
+  constructor(_templatesDir: string) {
+    // this.templatesDir = templatesDir;
+  }
 
   /**
    * Get available templates

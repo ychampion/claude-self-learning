@@ -1,5 +1,4 @@
-import type { QualityCheck, QualityIssue, Skill } from './types.js';
-import { extractCodeBlocks } from './utils.js';
+import type { QualityCheck, QualityIssue, Skill, CodeBlock } from './types.js';
 
 /**
  * Quality checker for skills
@@ -124,7 +123,7 @@ export class QualityChecker {
   /**
    * Check code blocks quality
    */
-  private checkCodeBlocks(codeBlocks: Array<{ language: string; code: string; hasTests: boolean }>): QualityIssue[] {
+  private checkCodeBlocks(codeBlocks: CodeBlock[]): QualityIssue[] {
     const issues: QualityIssue[] = [];
 
     for (const block of codeBlocks) {

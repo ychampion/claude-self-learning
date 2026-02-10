@@ -1,0 +1,12 @@
+{
+  "name": "FastAPI Framework",
+  "description": "Modern, fast (high-performance) web framework for building APIs with Python",
+  "version": "1.0.0",
+  "sources_verified": "2024-02-10",
+  "created": "2024-02-10",
+  "updated": "2024-02-10",
+  "topic": "FastAPI Framework",
+  "tags": ["api", "python", "web", "framework"],
+  "quality_score": 85,
+  "usage_count": 0
+}
