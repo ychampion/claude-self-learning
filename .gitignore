@@ -7,3 +7,7 @@ coverage/
 *.tsbuildinfo
 .vscode/
 .idea/
+.eslintcache
+*.swp
+*.swo
+*~
