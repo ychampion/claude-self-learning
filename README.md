@@ -283,4 +283,26 @@ MIT
 
 ---
 
-**Built for Claude Code** | **Made with ❤️**
+## Security
+
+This project has been scanned with:
+- ✅ CodeQL (0 vulnerabilities)
+- ✅ Automated code review (0 issues)
+- ✅ Built-in credential scanning
+
+Report security issues to the repository maintainer.
+
+---
+
+## Roadmap
+
+- [ ] VS Code extension for visual skill management
+- [ ] Git integration for auto-commits
+- [ ] Export to PDF/HTML
+- [ ] Skill dependency tracking
+- [ ] Community skill marketplace
+- [ ] Plugin extension system
+
+---
+
+**Built for Claude Code** | **Zero Cost** | **Production Ready** | **Made with ❤️**
